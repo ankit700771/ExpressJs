@@ -1,18 +1,12 @@
 import express from "express";
-
+import {
+  commentsControllers,
+  commentsControllersByID,
+} from "../../controllers/commentsControllers.js";
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  return res.json({
-    message: "Hello my name is comments",
-  });
-});
+router.get("/", commentsControllers);
 
-router.get("/:id", (req, res) => {
-  return res.json({
-    message: "After comments",
-    id: req.params.id,
-  });
-});
+router.get("/:id", commentsControllersByID);
 
 export default router;
