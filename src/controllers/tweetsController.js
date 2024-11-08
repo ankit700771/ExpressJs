@@ -1,10 +1,10 @@
-export const tweetController = (req, res) => {
+export const getTweet = (req, res) => {
   return res.send({
     message: "Hello tweetController",
   });
 };
 
-export const tweetControllerByID = (req, res) => {
+export const getTweetByID = (req, res) => {
   return res.send({
     message: "Tweet controller",
     id: req.params.id,
